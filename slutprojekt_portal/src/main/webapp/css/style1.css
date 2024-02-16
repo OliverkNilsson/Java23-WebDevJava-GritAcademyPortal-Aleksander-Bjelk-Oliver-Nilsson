@@ -79,3 +79,19 @@ a:focus {
 a:visited {
     color: #ffffff;
 }
+
+footer{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px; padding-right: 50px; padding-bottom: 50px;
+    background-color: black;
+}
+footer a{
+    color: white;
+}
+.footer{
+    display:flex;
+    flex-direction: column;
+    color: white;
+}

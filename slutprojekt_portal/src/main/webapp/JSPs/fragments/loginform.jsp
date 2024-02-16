@@ -14,8 +14,15 @@
 
 <form id="loginForm" action="/LogInServlet" method="POST">
     <label for="username">Username:</label>
-    <input>
-
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <label for="user_type" name="user_type">
+        <select id="user_type" name="user_type">
+        <option value="student">Student</option>
+        <option value="Teacher">Teacher</option>
+        </select>
+    <input type="submit" id="loginSubmit" name="loginSubmit">
 </form>
 
 </body>

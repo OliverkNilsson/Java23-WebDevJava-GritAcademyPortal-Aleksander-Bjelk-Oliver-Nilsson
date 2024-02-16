@@ -32,17 +32,19 @@ public class LogInServlet extends HttpServlet {
         if (userType.equals("student")){
             List data = MySQLConnector.getConnector().selectQuery("studentLogin", username, password);
 
-            if (!data.isEmpty()) {
+            if (data.size() > 1) {
                 resp.getWriter().print("LOGGED IN");
                 UsersBean usersBean = new UsersBean();
                 usersBean.setStateType(STATE_TYPE.confirmed);
                 resp.getWriter().print("LOGGED IN");
                 req.getSession().setAttribute("usersBean", usersBean);
+            }else{
+                System.out.println("fel");
             }
         } else if (userType.equals("teacher")) {
             List data = MySQLConnector.getConnector().selectQuery("teacherLogin", username, password);
 
-            if (!data.isEmpty()) resp.getWriter().print("LOGGED IN");
+            if (data.size() > 1) resp.getWriter().print("LOGGED IN");
 
         }
 

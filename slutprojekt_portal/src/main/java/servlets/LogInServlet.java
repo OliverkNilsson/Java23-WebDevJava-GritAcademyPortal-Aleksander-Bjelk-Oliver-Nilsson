@@ -1,6 +1,8 @@
 package servlets;
 
 import org.example.slutprojekt_portal.models.MySQLConnector;
+import org.example.slutprojekt_portal.models.STATE_TYPE;
+import org.example.slutprojekt_portal.models.UsersBean;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,8 +32,17 @@ public class LogInServlet extends HttpServlet {
         if (userType.equals("student")){
             List data = MySQLConnector.getConnector().selectQuery("studentLogin", username, password);
 
-            if (!data.isEmpty()) resp.getWriter().print("LOGGED IN");
+            if (!data.isEmpty()) {
+                resp.getWriter().print("LOGGED IN");
+                UsersBean usersBean = new UsersBean();
+                usersBean.setStateType(STATE_TYPE.confirmed);
+                resp.getWriter().print("LOGGED IN");
+                req.getSession().setAttribute("usersBean", usersBean);
+            }
         } else if (userType.equals("teacher")) {
+            List data = MySQLConnector.getConnector().selectQuery("teacherLogin", username, password);
+
+            if (!data.isEmpty()) resp.getWriter().print("LOGGED IN");
 
         }
 

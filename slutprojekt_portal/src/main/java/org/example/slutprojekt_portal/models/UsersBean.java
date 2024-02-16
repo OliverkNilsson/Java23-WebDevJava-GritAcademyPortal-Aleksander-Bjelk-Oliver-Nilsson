@@ -5,13 +5,14 @@ import java.io.Serializable;
 public class UsersBean implements Serializable {
 
     private USER_TYPE userType;
-    private PRIVILAGE_TYPE userPrivilage = PRIVILAGE_TYPE.user;
+    private PRIVILAGE_TYPE privilageType = PRIVILAGE_TYPE.user;
     private STATE_TYPE stateType = STATE_TYPE.anonymous;
 
 
+    public UsersBean() {
+    }
 
-
-    public UsersBean(){};
+    ;
 
     public USER_TYPE getUserType() {
         return userType;
@@ -29,13 +30,19 @@ public class UsersBean implements Serializable {
         this.stateType = stateType;
     }
 
-    public PRIVILAGE_TYPE getUserPrivilage() {
-        return userPrivilage;
+    public PRIVILAGE_TYPE getPrivilageType() {
+        return privilageType;
     }
 
     public void setUserPrivilage(PRIVILAGE_TYPE userPrivilage) {
-        this.userPrivilage = userPrivilage;
+        this.privilageType = userPrivilage;
     }
+
+    @Override
+    public String toString() {
+        return userType + " " + privilageType + " " + stateType;
+    }
+}
 
     enum USER_TYPE {
         student,
@@ -46,9 +53,6 @@ public class UsersBean implements Serializable {
         admin,
         superadmin
     }
-    enum STATE_TYPE {
-        anonymous,
-        confirmed
-    }
 
-}
+
+

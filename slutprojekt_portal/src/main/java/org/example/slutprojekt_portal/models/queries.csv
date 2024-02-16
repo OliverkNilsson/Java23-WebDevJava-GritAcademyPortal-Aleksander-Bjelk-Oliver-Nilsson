@@ -5,7 +5,8 @@ addStudentToStudents;INSERT INTO studenter (fname, lname, town, hobby) VALUES (?
 findUser;SELECT username, password FROM users s WHERE s.username='{0}' AND s.password='{1}' ORDER BY s.id ASC;gritacademy;localhost;3306;user;user
 
 
-studentLogin;Select id FROM Students s WHERE s.username='{0}' AND s.password='{1}'; GritAcademyPortal;localhost;4306;user;user
+studentLogin;Select * FROM Students s WHERE s.username='{0}' AND s.password='{1}'; GritAcademyPortal;localhost;4306;user;user
+teacherLogin;Select * FROM teachers t WHERE t.username='{0}' AND t.password='{1}'; GritAcademyPortal;localhost;4306;user;user
 
 
 

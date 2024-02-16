@@ -16,7 +16,7 @@
 <nav id="nav">
     <a href="/index.html" class="current" title="Start">Start</a>
     <a href="/register" title="Register">Register</a>
-    <a href="/student" title="Students">Students</a>
+    <a href="/students" title="Students">Students</a>
     <a href="/teachers" title="Teachers">Teachers</a>
     <a href="/courses" title="Courses">Courses</a>
     <a href="/login" title="LogIn">Log In</a>

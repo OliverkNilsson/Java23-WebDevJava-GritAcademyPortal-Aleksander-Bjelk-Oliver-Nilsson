@@ -93,8 +93,8 @@ td, th {
 footer{
     color: white;
     display: flex;
-    justify-content: space-between;
-    padding-left: 50%; padding-right: 50px; padding-bottom: 50px;
+    text-align: center;
+    justify-content: center;
     background-color: black;
 }
 footer a{

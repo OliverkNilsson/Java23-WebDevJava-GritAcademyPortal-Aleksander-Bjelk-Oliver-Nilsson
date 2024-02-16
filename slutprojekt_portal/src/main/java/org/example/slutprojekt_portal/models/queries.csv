@@ -1,0 +1,8 @@
+allFromStudenter;SELECT id, fname, lname, town, hobby FROM studenter ORDER BY id ASC;gritacademy;localhost;3306;user;user
+allCoursesForStudent;SELECT s.id, s.fname, s.lname, k.namn, k.YHP, k.beskrivning FROM studenter s JOIN narvaro n ON n.studentID=s.id JOIN kurser k ON k.id=n.kursID WHERE s.fname='{0}' AND s.lname='{1}' AND s.id='{2}' ORDER BY s.id ASC;gritacademy;localhost;3306;user;user
+allCoursesForStudentNoID;SELECT s.id, s.fname, s.lname, k.namn, k.YHP, k.beskrivning FROM studenter s JOIN narvaro n ON n.studentID=s.id JOIN kurser k ON k.id=n.kursID WHERE s.fname='{0}' AND s.lname='{1}' ORDER BY s.id ASC;gritacademy;localhost;3306;user;user
+addStudentToStudents;INSERT INTO studenter (fname, lname, town, hobby) VALUES (?,?,?,?);gritacademy;localhost;3306;inserter;inserter
+findUser;SELECT username, password FROM users s WHERE s.username='{0}' AND s.password='{1}' ORDER BY s.id ASC;gritacademy;localhost;3306;user;user
+
+
+

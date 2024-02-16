@@ -1,4 +1,10 @@
 package org.example.slutprojekt_portal.models;
 
-public class UsersBean {
+import java.io.Serializable;
+
+public class UsersBean implements Serializable {
+
+    public UsersBean(){};
+
+
 }

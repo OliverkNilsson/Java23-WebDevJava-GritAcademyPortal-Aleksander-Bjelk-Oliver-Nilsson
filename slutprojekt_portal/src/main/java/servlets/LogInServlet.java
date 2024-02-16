@@ -29,25 +29,31 @@ public class LogInServlet extends HttpServlet {
         String password = req.getParameter("password");
         String userType = req.getParameter("user_type");
 
-        if (userType.equals("student")){
+        if (userType.equals("student")) {
             List data = MySQLConnector.getConnector().selectQuery("studentLogin", username, password);
 
             if (data.size() > 1) {
-                resp.getWriter().print("LOGGED IN");
                 UsersBean usersBean = new UsersBean();
                 usersBean.setStateType(STATE_TYPE.confirmed);
-                resp.getWriter().print("LOGGED IN");
+
                 req.getSession().setAttribute("usersBean", usersBean);
-            }else{
-                System.out.println("fel");
+                req.getRequestDispatcher("JSPs/Start.jsp").forward(req, resp);
             }
+
+
         } else if (userType.equals("teacher")) {
             List data = MySQLConnector.getConnector().selectQuery("teacherLogin", username, password);
 
-            if (data.size() > 1) resp.getWriter().print("LOGGED IN");
+            if (data.size() > 1) {
+                UsersBean usersBean = new UsersBean();
+                usersBean.setStateType(STATE_TYPE.confirmed);
 
+                req.getSession().setAttribute("usersBean", usersBean);
+                req.getRequestDispatcher("JSPs/Start.jsp").forward(req, resp);
+
+            }
+
+            //  resp.getWriter().print(username + " " + password + " " + userType);
         }
-
-      //  resp.getWriter().print(username + " " + password + " " + userType);
     }
 }

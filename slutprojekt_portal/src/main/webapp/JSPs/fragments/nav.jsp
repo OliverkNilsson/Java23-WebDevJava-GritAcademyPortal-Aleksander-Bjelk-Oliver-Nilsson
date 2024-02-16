@@ -9,8 +9,18 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
+
+<nav id="nav">
+    <a href="/index.html" class="current" title="Start">Start</a>
+    <a href="/register" title="Register">Register</a>
+    <a href="/student" title="Students">Students</a>
+    <a href="/teachers" title="Teachers">Teachers</a>
+    <a href="/courses" title="Courses">Courses</a>
+    <a href="/login" title="LogIn">Log In</a>
+</nav>
 
 </body>
 </html>

@@ -1,0 +1,81 @@
+html, body{
+    margin: 0;
+}
+
+header {
+    box-sizing: border-box;
+    padding: 5%;
+    text-align: left;
+    background: rgb(252, 202, 3);
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    font-family: 'Sedgwick Ave Display'
+}
+
+#headertext {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    position: relative;
+    animation-name: huvudtext;
+    animation-duration: 4s;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+@keyframes huvudtext {
+    0%   {color:rgb(252, 202, 3); left:0px; top:0px;}
+    30%   {color:rgb(252, 202, 3); left:0px; top:0px;}
+    60%  {color:rgb(255, 255, 255); left:0px; top:0px;}
+    100% {color:rgb(0, 0, 0); left:0px; top:0px;}
+}
+
+nav {
+    box-sizing: border-box;
+    padding: 1%;
+    background: black;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align:center;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    font-family: 'Sedgwick Ave Display'
+}
+
+a:link{
+    color: #ffffff;
+}
+
+aside a:link {
+    color:rgb(0, 0, 0);
+}
+
+aside a:visited {
+    color:rgb(0, 0, 0);
+}
+
+aside a:hover {
+    color:rgb(0, 0, 0);
+}
+
+a:hover {
+    background-color: rgb(252, 202, 3);
+    transform: scale(110%);
+    transition: 0.5s;
+}
+
+a:active {
+    box-shadow: 3px 3px 3px rgb(252, 202, 3)
+}
+
+a:focus {
+    background: rgb(255, 0, 0);
+}
+
+a:visited {
+    color: #ffffff;
+}

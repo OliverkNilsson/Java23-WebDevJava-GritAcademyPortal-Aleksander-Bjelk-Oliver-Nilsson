@@ -37,7 +37,9 @@ public class LogInServlet extends HttpServlet {
                 usersBean.setStateType(STATE_TYPE.confirmed);
 
                 req.getSession().setAttribute("usersBean", usersBean);
-                req.getRequestDispatcher("JSPs/Start.jsp").forward(req, resp);
+                req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
+            } else {
+                req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);
             }
 
 
@@ -49,8 +51,10 @@ public class LogInServlet extends HttpServlet {
                 usersBean.setStateType(STATE_TYPE.confirmed);
 
                 req.getSession().setAttribute("usersBean", usersBean);
-                req.getRequestDispatcher("JSPs/Start.jsp").forward(req, resp);
+                req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
 
+            }else{
+                req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);
             }
 
             //  resp.getWriter().print(username + " " + password + " " + userType);

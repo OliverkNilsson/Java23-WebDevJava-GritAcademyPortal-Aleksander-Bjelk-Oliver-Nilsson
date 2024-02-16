@@ -14,7 +14,7 @@
 <body>
 
 <nav id="nav">
-    <a href="/start" class="current" title="Start">Start</a>
+    <a href="" class="current" title="Start">Start</a>
     <a href="/courses" title="Courses">Courses</a>
     <a href="/login" title="UserPage">User Page</a>
     <a href="/login" title="LogIn">Log In</a>

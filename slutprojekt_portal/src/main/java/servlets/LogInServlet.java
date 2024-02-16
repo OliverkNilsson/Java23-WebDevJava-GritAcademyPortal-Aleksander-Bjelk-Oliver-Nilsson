@@ -19,8 +19,10 @@ public class LogInServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/HTML");
 
-        String username =
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        String userType = req.getParameter("user_type");
 
-        resp.getWriter().print("TODO check username ");
+        resp.getWriter().print(username + " " + password + " " + userType);
     }
 }

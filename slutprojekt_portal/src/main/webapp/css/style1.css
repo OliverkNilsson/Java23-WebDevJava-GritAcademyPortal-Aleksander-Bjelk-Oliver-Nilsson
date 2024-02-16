@@ -80,6 +80,16 @@ a:visited {
     color: #ffffff;
 }
 
+table {
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
 footer{
     color: white;
     display: flex;
@@ -94,4 +104,13 @@ footer a{
     display:flex;
     flex-direction: column;
     color: white;
+    height: 200px;
+}
+
+#loginForm{
+    text-align: center;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
 }

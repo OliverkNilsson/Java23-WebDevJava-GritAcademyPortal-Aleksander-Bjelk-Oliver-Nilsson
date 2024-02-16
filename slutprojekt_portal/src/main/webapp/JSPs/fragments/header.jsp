@@ -9,7 +9,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/style1.css">
-    <title>Title</title>
+    <title>Grit Academy Portal</title>
 </head>
 <body>
 <header>

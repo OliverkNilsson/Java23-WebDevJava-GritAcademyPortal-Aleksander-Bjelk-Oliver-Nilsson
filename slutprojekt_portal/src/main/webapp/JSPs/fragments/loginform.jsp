@@ -12,7 +12,11 @@
 </head>
 <body>
 
+<form id="loginForm" action="/LogInServlet" method="POST">
+    <label for="username">Username:</label>
+    <input>
 
+</form>
 
 </body>
 </html>

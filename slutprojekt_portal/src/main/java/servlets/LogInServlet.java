@@ -14,4 +14,13 @@ public class LogInServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/HTML");
+
+        String username =
+
+        resp.getWriter().print("TODO check username ");
+    }
 }

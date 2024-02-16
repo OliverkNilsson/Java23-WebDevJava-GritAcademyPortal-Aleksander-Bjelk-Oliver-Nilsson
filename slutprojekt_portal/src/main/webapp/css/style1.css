@@ -31,7 +31,9 @@ header {
     60%  {color:rgb(255, 255, 255); left:0px; top:0px;}
     100% {color:rgb(0, 0, 0); left:0px; top:0px;}
 }
-
+a {
+    text-decoration: none;
+}
 nav {
     box-sizing: border-box;
     padding: 1%;

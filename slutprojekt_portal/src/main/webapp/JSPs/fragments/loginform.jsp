@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form id="loginForm" action="/LogInServlet" method="POST">
+<form id="loginForm" action="/login" method="POST">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username"><br><br>
     <label for="password">Password:</label><br>

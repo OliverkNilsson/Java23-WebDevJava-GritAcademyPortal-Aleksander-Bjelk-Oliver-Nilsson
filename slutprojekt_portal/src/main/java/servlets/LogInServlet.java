@@ -52,7 +52,6 @@ public class LogInServlet extends HttpServlet {
 
                 req.getSession().setAttribute("usersBean", usersBean);
                 req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
-
             }else{
                 req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);
             }

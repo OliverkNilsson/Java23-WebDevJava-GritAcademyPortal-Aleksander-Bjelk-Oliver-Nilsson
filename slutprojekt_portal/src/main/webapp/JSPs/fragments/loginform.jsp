@@ -20,7 +20,7 @@
     <label for="user_type" name="user_type"></label>
         <select id="user_type" name="user_type">
         <option value="student">Student</option>
-        <option value="Teacher">Teacher</option>
+        <option value="teacher">Teacher</option>
         </select>
     <input type="submit" id="loginSubmit" name="loginSubmit">
 </form>

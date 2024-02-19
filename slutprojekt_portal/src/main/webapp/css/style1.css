@@ -130,3 +130,7 @@ footer a{
     display: flex;
     font-family: 'Sedgwick Ave Display'
 }
+
+.center {
+    text-align: center;
+}

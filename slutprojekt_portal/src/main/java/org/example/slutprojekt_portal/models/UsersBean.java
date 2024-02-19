@@ -44,15 +44,5 @@ public class UsersBean implements Serializable {
     }
 }
 
-    enum USER_TYPE {
-        student,
-        teacher
-    }
-    enum PRIVILAGE_TYPE {
-        user,
-        admin,
-        superadmin
-    }
-
 
 

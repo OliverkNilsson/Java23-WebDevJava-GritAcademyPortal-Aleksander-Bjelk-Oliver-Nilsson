@@ -1,5 +1,7 @@
 package servlets;
 
+import org.example.slutprojekt_portal.models.PRIVILAGE_TYPE;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

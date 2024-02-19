@@ -1,8 +1,7 @@
 package servlets;
 
-import org.example.slutprojekt_portal.models.MySQLConnector;
-import org.example.slutprojekt_portal.models.STATE_TYPE;
-import org.example.slutprojekt_portal.models.UsersBean;
+import com.google.protobuf.StringValue;
+import org.example.slutprojekt_portal.models.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Statement;
 import java.util.List;
+import java.util.Objects;
 
 @WebServlet (name="/login", urlPatterns = "/login")
 public class LogInServlet extends HttpServlet {
@@ -35,6 +36,7 @@ public class LogInServlet extends HttpServlet {
             if (data.size() > 1) {
                 UsersBean usersBean = new UsersBean();
                 usersBean.setStateType(STATE_TYPE.confirmed);
+                usersBean.setUserType(USER_TYPE.student);
 
                 req.getSession().setAttribute("usersBean", usersBean);
                 req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
@@ -50,6 +52,16 @@ public class LogInServlet extends HttpServlet {
             if (data.size() > 1) {
                 UsersBean usersBean = new UsersBean();
                 usersBean.setStateType(STATE_TYPE.confirmed);
+                usersBean.setUserType(USER_TYPE.teacher);
+
+                /*String privilageType = String.valueOf(MySQLConnector.getConnector().selectQuery("checkPrivilageType", username, password));
+
+                if(Objects.equals(privilageType, "admin")) {
+                    usersBean.setUserPrivilage(PRIVILAGE_TYPE.admin);
+                    System.out.println(privilageType);
+                }
+
+                 */
 
                 req.getSession().setAttribute("usersBean", usersBean);
                 req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);

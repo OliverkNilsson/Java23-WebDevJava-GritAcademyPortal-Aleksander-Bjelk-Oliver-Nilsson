@@ -14,9 +14,18 @@
 </head>
 <body>
 <%@ include file="fragments/header.jsp"%>
-<%@ include file="fragments/navAno.jsp"%>
-<%@ include file="fragments/navCon.jsp"%>
-<%@ include file="fragments/subNav.jsp"%>
+
+<c:if test="${empty sessionScope.usersBean}">
+    <%@ include file="fragments/navAno.jsp"%>
+</c:if>
+
+<c:if test="${not empty sessionScope.usersBean}">
+    <%@ include file="fragments/navCon.jsp"%>
+</c:if>
+
+<c:if test="${empty sessionScope.usersBean}">
+    <%@ include file="fragments/subNav.jsp"%>
+</c:if>
 
 <table>
 

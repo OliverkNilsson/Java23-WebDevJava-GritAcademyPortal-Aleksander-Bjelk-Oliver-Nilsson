@@ -133,4 +133,15 @@ footer a{
 
 .center {
     text-align: center;
+    color: #ffffff;
+
+}
+
+.main {
+    background-image: url(/images/Grit-Academy-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(252, 202, 3);
+    background-color: rgba(0, 0, 0, 0.5);
 }

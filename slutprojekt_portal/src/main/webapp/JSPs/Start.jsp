@@ -14,8 +14,9 @@
 <body>
 <%@ include file="fragments/header.jsp"%>
 <%@ include file="fragments/navAno.jsp"%>
+<div class="main">
 <div class="center">
-    <h1>
+    <h1 style="margin-top: 0px;">
         Välkommna till Grit Academy Portal
     </h1> <br>
 
@@ -29,6 +30,7 @@
 
 
 
+</div>
 </div>
 <%@ include file="fragments/footer.jsp"%>
 

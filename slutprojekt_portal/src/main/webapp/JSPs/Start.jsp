@@ -14,19 +14,19 @@
 <body>
 <%@ include file="fragments/header.jsp"%>
 <%@ include file="fragments/navAno.jsp"%>
-<div class="main">
+<div class="startpicture">
 <div class="center">
     <br>
-    <h1 style="margin-top: 0px;">
-        Välkommna till Grit Academy Portal
+    <h1 style="margin-top: 0;">
+        Welcome to Grit Academy Portal
     </h1> <br>
 
     <h2>
-        Här hittar du all information som elev, lärare eller Admin!
+        Here you can find all your information as student, teacher or admin
     </h2> <br>
 
     <h3>
-        Tryck på länken Courses för att se vilka kurser skolan erbjuder!
+        If you want to look at our schools courses, press the link in the navbar!
     </h3> <br>
 
 

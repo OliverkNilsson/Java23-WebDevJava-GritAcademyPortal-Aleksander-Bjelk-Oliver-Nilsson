@@ -22,7 +22,7 @@
 <c:if test="${not empty sessionScope.usersBean}">
     <%@ include file="fragments/navCon.jsp"%>
 </c:if>
-
+<div class="generalpicture">
 <table>
 
     <tbody>
@@ -36,7 +36,7 @@
     </c:forEach>
     </tbody>
 </table>
-
+</div>
 <%@ include file="fragments/footer.jsp"%>
 </body>
 </html>

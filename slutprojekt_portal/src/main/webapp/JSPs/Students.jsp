@@ -9,10 +9,16 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
+
+<body>
 <%@ include file="fragments/header.jsp"%>
 <%@ include file="fragments/navCon.jsp"%>
+<div class="generalpicture">
+
+
+
+</div>
 <%@ include file="fragments/footer.jsp"%>
-<body>
 
 </body>
 </html>

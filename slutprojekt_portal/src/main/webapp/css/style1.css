@@ -137,13 +137,21 @@ footer a{
 
 }
 
-.main {
+.startpicture {
     background-image: url(/images/Grit-Academy-logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgb(252, 202, 3);
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.generalpicture {
+    background-image: url(/images/grit_academy_logo3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .error-message{

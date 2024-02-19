@@ -9,17 +9,21 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
+
+<body>
 <%@ include file="fragments/header.jsp"%>
 <%@ include file="fragments/navAno.jsp"%>
 
-<c:if test="${not empty errorMessage}">
+<div class="generalpicture">
+    <c:if test="${not empty errorMessage}">
     <div class="error-message">${errorMessage}
-    </div>
-</c:if>
-<%@ include file="fragments/loginform.jsp"%>
 
-<%@ include file="fragments/footer.jsp"%>
-<body>
+        </c:if>
+        <%@ include file="fragments/loginform.jsp"%>
+
+    </div>
+        <%@ include file="fragments/footer.jsp"%>
+
 
 </body>
 </html>

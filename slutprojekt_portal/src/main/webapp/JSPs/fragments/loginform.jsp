@@ -22,7 +22,7 @@
         <option value="student">Student</option>
         <option value="teacher">Teacher</option>
         </select>
-    <input type="submit" id="loginSubmit" name="loginSubmit">
+    <input type="submit" id="loginSubmit" name="loginSubmit" value="Log In">
 </form>
 
 </body>

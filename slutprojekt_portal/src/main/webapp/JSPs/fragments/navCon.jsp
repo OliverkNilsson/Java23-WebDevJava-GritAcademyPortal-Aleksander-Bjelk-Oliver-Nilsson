@@ -14,7 +14,6 @@
 <body>
 
 <nav id="nav">
-    <a href="" class="current" title="Start">Start</a>
     <a href="/courses" title="Courses">Courses</a>
     <a href="/userpage" title="UserPage">User Page</a>
     <a href="/logout" title="LogOut">Log Out</a>

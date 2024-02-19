@@ -12,6 +12,7 @@
 
 <body>
 <%@ include file="fragments/header.jsp"%>
+<h2 class="subHeader" id="subHeadertext">Log In</h2>
 <%@ include file="fragments/navAno.jsp"%>
 
 <div class="generalpicture">

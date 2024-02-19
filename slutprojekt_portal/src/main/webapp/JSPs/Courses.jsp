@@ -15,6 +15,8 @@
 <body>
 <%@ include file="fragments/header.jsp"%>
 
+<h2 class="subHeader" id="subHeadertext">Courses</h2>
+
 <c:if test="${empty sessionScope.usersBean}">
     <%@ include file="fragments/navAno.jsp"%>
 </c:if>

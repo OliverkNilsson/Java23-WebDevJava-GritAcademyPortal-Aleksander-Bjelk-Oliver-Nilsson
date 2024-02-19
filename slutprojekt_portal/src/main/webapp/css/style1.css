@@ -4,11 +4,24 @@ html, body{
 
 header {
     box-sizing: border-box;
-    padding: 5%;
+    padding: 30px;
     text-align: left;
     background: rgb(252, 202, 3);
     color: rgb(0, 0, 0);
     font-size: 30px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    font-family: 'Sedgwick Ave Display'
+}
+.subHeader {
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 30px;
+    text-align: left;
+    background: rgb(252, 202, 3);
+    color: rgb(0, 0, 0);
+    font-size: 40px;
     text-align: center;
     width: 100%;
     position: relative;
@@ -22,6 +35,14 @@ header {
     animation-name: huvudtext;
     animation-duration: 4s;
     padding: 30px;
+    box-sizing: border-box;
+}
+#subHeadertext {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    position: relative;
+    animation-name: huvudtext;
+    animation-duration: 4s;
     box-sizing: border-box;
 }
 

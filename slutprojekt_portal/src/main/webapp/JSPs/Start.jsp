@@ -16,6 +16,7 @@
 <%@ include file="fragments/navAno.jsp"%>
 <div class="main">
 <div class="center">
+    <br>
     <h1 style="margin-top: 0px;">
         Välkommna till Grit Academy Portal
     </h1> <br>

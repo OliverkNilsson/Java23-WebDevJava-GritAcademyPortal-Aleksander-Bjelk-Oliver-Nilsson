@@ -23,10 +23,6 @@
     <%@ include file="fragments/navCon.jsp"%>
 </c:if>
 
-<c:if test="${empty sessionScope.usersBean}">
-    <%@ include file="fragments/subNav.jsp"%>
-</c:if>
-
 <table>
 
     <tbody>

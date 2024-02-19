@@ -9,4 +9,5 @@ studentLogin;Select * FROM Students s WHERE s.username='{0}' AND s.password='{1}
 teacherLogin;Select * FROM teachers t WHERE t.username='{0}' AND t.password='{1}'; GritAcademyPortal;localhost;4306;user;user
 
 
+allCourses;SELECT * FROM Courses;GritAcademyPortal;localhost;4306;user;user
 

@@ -10,7 +10,8 @@
 <!DOCTYPE html>
 <html>
 <%@ include file="fragments/header.jsp"%>
-<%@ include file="fragments/navAno.jsp"%>
+<%@ include file="fragments/navCon.jsp"%>
+<%@ include file="fragments/subNav.jsp"%>
 <%@ include file="fragments/footer.jsp"%>
 <body>
 

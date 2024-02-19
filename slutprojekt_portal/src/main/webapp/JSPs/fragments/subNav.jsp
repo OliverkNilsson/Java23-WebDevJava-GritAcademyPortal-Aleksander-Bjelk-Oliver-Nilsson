@@ -8,9 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Grit Academy Portal</title>
+    <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
+
+
+<subnav id="subnav">
+
+</subnav>
 
 </body>
 </html>

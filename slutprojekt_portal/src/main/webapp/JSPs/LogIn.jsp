@@ -12,6 +12,12 @@
 <%@ include file="fragments/header.jsp"%>
 <%@ include file="fragments/navAno.jsp"%>
 <%@ include file="fragments/loginform.jsp"%>
+
+<c:if test="${not empty errorMessage}">
+    <div class="error-message">${errorMessage}
+    </div>
+</c:if>
+
 <%@ include file="fragments/footer.jsp"%>
 <body>
 

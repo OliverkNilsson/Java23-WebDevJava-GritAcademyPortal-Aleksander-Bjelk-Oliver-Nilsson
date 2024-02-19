@@ -39,6 +39,7 @@ public class LogInServlet extends HttpServlet {
                 req.getSession().setAttribute("usersBean", usersBean);
                 req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
             } else {
+                req.setAttribute("errorMessage", "Invalid username or password");
                 req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);
             }
 
@@ -53,6 +54,7 @@ public class LogInServlet extends HttpServlet {
                 req.getSession().setAttribute("usersBean", usersBean);
                 req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
             }else{
+                req.setAttribute("errorMessage", "Invalid username or password");
                 req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);
             }
 

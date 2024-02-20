@@ -47,7 +47,9 @@ public class UserPageServlet extends HttpServlet {
 
         }else if (usersBean != null && usersBean.getUserType() == USER_TYPE.teacher && usersBean.getPrivilageType()==PRIVILAGE_TYPE.user && usersBean.getStateType() == STATE_TYPE.confirmed) {
             LinkedList<String[]> data = null;
+            LinkedList<String[]> data2 = null;
             LinkedList<String[]> students = MySQLConnector.getConnector().selectQuery("showAllFromStudents");
+            LinkedList<String[]> courses = MySQLConnector.getConnector().selectQuery("allCourses");
 
             System.out.println(students.size());
             if(req.getParameter("showCoursesForStudent")!=null){
@@ -55,12 +57,21 @@ public class UserPageServlet extends HttpServlet {
                 System.out.println(req.getParameter("studentId"));
                 System.out.println(data + "!!!!!");
                 System.out.println(data.size());
-            }else {
-                data = students;
+            }else if(req.getParameter("studentSubmitButton")!=null){
+                data2 = MySQLConnector.getConnector().selectQuery("courseDetails",  req.getParameter("courseId"));
+                System.out.println(req.getParameter("courseId"));
+                System.out.println(req.getParameter("courseId"));
+                System.out.println(data2 + "!!!!!");
+                System.out.println(data2.size());
+            } else {
+                    data = students;
+                    data2 = courses;
             }
 
             req.setAttribute("data", data);
+            req.setAttribute("data2", data2);
             req.setAttribute("students", students);
+            req.setAttribute("courses", courses);
             req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
         }else{
             req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);

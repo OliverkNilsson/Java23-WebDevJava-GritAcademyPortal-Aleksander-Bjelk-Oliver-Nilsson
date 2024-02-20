@@ -4,7 +4,8 @@
 </head>
 <body>
 <%@ include file="teacherStudentTable.jsp"%>
-<%@ include file="teachersCoursesTable.jsp"%>
+<%@ include file="/JSPs/fragments/student/studentCoursesTable.jsp"%>
 <%@ include file="../misc/tableData.jsp"%>
+<%@ include file="../misc/tableData2.jsp"%>
 </body>
 </html>

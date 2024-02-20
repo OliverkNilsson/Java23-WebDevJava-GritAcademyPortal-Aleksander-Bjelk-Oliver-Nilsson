@@ -6,7 +6,7 @@ header {
     box-sizing: border-box;
     padding: 30px;
     text-align: left;
-    background: rgb(252, 202, 3);
+    background: rgba(174,142,66,255);
     color: rgb(0, 0, 0);
     font-size: 30px;
     text-align: center;
@@ -19,7 +19,7 @@ header {
     margin: 0;
     padding-bottom: 30px;
     text-align: left;
-    background: rgb(252, 202, 3);
+    background: rgba(174,142,66,255);
     color: rgb(0, 0, 0);
     font-size: 40px;
     text-align: center;
@@ -47,8 +47,8 @@ header {
 }
 
 @keyframes huvudtext {
-    0%   {color:rgb(252, 202, 3); left:0px; top:0px;}
-    30%   {color:rgb(252, 202, 3); left:0px; top:0px;}
+    0%   {color:rgba(174,142,66,255); left:0px; top:0px;}
+    30%   {color:rgba(174,142,66,255); left:0px; top:0px;}
     60%  {color:rgb(255, 255, 255); left:0px; top:0px;}
     100% {color:rgb(0, 0, 0); left:0px; top:0px;}
 }
@@ -86,13 +86,13 @@ aside a:hover {
 }
 
 a:hover {
-    background-color: rgb(252, 202, 3);
+    background-color: rgba(174,142,66,255);
     transform: scale(110%);
     transition: 0.5s;
 }
 
 a:active {
-    box-shadow: 3px 3px 3px rgb(252, 202, 3)
+    box-shadow: 3px 3px 3px rgba(174,142,66,255)
 }
 
 a:focus {
@@ -141,7 +141,7 @@ footer a{
 #subnav {
     box-sizing: border-box;
     padding: 1%;
-    background: rgb(252, 202, 3);
+    background: rgba(174,142,66,255);
     color: rgb(255, 255, 255);
     font-size: 25px;
     text-align:center;
@@ -155,6 +155,7 @@ footer a{
 .center {
     text-align: center;
     color: #ffffff;
+    padding-top: 20px;
 
 }
 
@@ -163,7 +164,7 @@ footer a{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgb(252, 202, 3);
+    background-color: rgba(174,142,66,255);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -179,5 +180,9 @@ footer a{
     text-align: center;
     color: red;
     font-size: 20px;
+    padding-top: 20px;
+}
+
+.padding {
     padding-top: 20px;
 }

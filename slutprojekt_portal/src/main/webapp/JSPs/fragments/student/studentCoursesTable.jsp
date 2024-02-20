@@ -14,16 +14,7 @@
 <body>
 
 
-<c:if test="${empty sessionScope.usersBean}">
-    <%@ include file="../navAno.jsp"%>
-</c:if>
-
-<c:if test="${not empty sessionScope.usersBean}">
-    <%@ include file="../navCon.jsp"%>
-</c:if>
-
-
-<div class="generalpicture">
+<div class="center">
     <form action="/userpage" method="post">
         <select id="user_type" name="courseId">
             <c:forEach items="${courses}" var="dataC">
@@ -33,8 +24,8 @@
         <input type="submit" id="studentSubmit" name="studentSubmitButton" value="Show Course details">
         <button onclick=location.href='/userpage'>Go Back</button>
     </form>
-
 </div>
+
 
 
 </body>

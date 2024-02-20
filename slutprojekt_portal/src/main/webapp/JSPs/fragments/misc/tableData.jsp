@@ -5,6 +5,7 @@
   Time: 10:52
   To change this template use File | Settings | File Templates.
 --%>
+<div class="generalpicture">
 <table id="table data">
     <c:forEach items="${data}" var="dataC">
         <tr>
@@ -14,3 +15,4 @@
         </tr>
     </c:forEach>
 </table>
+</div>

@@ -39,7 +39,7 @@ public class MySQLConnector {
                 line = query.trim().split(";");
                 if(line[0].equals(queryName)){
                     for (int i = 0; i < args.length; i++) {
-                        line[1] = line[1].replace("{"+i+"}",args[i]) ;
+                        line[1] = line[1].replace("{"+i+"}",args[i]);
                     }
                     System.out.println("Executing query: "+queryName +" - "+ line[1]);
                     return select(line[1], line[2], line[3], line[4], line[5], line[6]);

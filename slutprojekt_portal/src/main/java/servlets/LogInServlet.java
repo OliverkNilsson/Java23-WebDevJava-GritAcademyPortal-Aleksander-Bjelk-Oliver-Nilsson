@@ -36,11 +36,13 @@ public class LogInServlet extends HttpServlet {
 
             if (data.size() > 1) {
                 UsersBean usersBean = new UsersBean();
+                usersBean.setId(data.get(1)[0]);
                 usersBean.setStateType(STATE_TYPE.confirmed);
                 usersBean.setUserType(USER_TYPE.student);
 
                 req.getSession().setAttribute("usersBean", usersBean);
-                req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
+                System.out.println(usersBean);
+                req.getRequestDispatcher("/userpage").forward(req, resp);
             } else {
                 req.setAttribute("errorMessage", "Invalid username or password");
                 req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);

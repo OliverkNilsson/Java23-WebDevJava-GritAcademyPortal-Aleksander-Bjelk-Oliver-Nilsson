@@ -20,26 +20,28 @@ public class UserPageServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        UsersBean userBean = req.getSession().getAttribute("userBean") != null ? (UsersBean)req.getSession().getAttribute("userBean") : null;
+        UsersBean usersBean = req.getSession().getAttribute("usersBean") != null ? (UsersBean)req.getSession().getAttribute("usersBean") : null;
 
-        if (userBean != null && userBean.getUserType() == USER_TYPE.student && userBean.getStateType() == STATE_TYPE.confirmed) {
+        System.out.println(usersBean);
+        if (usersBean != null && usersBean.getUserType() == USER_TYPE.student && usersBean.getStateType() == STATE_TYPE.confirmed) {
 
 
             LinkedList<String[]> data = null;
-            LinkedList<String[]> courses = MySQLConnector.getConnector().selectQuery("allCoursesForStudent", ((UsersBean) req.getSession().getAttribute("userBean")).getId());
+            LinkedList<String[]> courses = MySQLConnector.getConnector().selectQuery("allCoursesForStudent", ((UsersBean) req.getSession().getAttribute("usersBean")).getId());
 
+            System.out.println(courses.size());
             if(req.getParameter("studentSubmitButton")!=null){
                 data = MySQLConnector.getConnector().selectQuery("courseDetails",  req.getParameter("courseId"));
-
+                System.out.println(data.size());
             }else {
                 data = courses;
             }
             req.setAttribute("data", data);
             req.setAttribute("courses", courses);
-            req.getRequestDispatcher("JSPs/UserPage.jsp").forward(req, resp);
+            req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
 
-        }else if (userBean != null && userBean.getUserType() == USER_TYPE.teacher && userBean.getPrivilageType()==PRIVILAGE_TYPE.user && userBean.getStateType() == STATE_TYPE.confirmed) {
-            req.getRequestDispatcher("JSPs/UserPage.jsp").forward(req, resp);
+        }else if (usersBean != null && usersBean.getUserType() == USER_TYPE.teacher && usersBean.getPrivilageType()==PRIVILAGE_TYPE.user && usersBean.getStateType() == STATE_TYPE.confirmed) {
+            req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
         }else{
             req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);
         }

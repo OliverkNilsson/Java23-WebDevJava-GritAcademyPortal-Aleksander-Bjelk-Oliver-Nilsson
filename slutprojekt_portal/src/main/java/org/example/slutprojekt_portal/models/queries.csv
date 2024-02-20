@@ -7,6 +7,7 @@ showStudentName;SELECT fname FROM Students;GritAcademyPortal;localhost;4306;user
 showAllFromStudents;SELECT fname, lname, town, email, phone FROM Students;GritAcademyPortal;localhost;4306;user;user
 
 allCourses;SELECT * FROM Courses;GritAcademyPortal;localhost;4306;user;user
+allStudents;SELECT * FROM Students;GritAcademyPortal;localhost;4306;user;user
 
 
 allCoursesForStudentAndStudentsAndTeachers;SELECT s.student_id, s.fname, t.fname FROM students s JOIN students_courses sc ON s.student_id = sc.students_id JOIN courses c ON sc.courses_id = c.courses_id JOIN teachers_courses tc ON c.courses_id = tc.courses_id JOIN teachers t ON tc.teachers_id = t.teachers_id WHERE c.courses_id = ? AND s.student_id = ?; GritAcademyPortal;localhost;4306;user;user

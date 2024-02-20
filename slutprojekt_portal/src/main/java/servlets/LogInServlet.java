@@ -52,6 +52,7 @@ public class LogInServlet extends HttpServlet {
             if (data.size() > 1) {
                 UsersBean usersBean = new UsersBean();
                 usersBean.setId(data.get(1)[0]);
+                usersBean.setUserPrivilage(PRIVILAGE_TYPE.valueOf(data.get(1)[8]));
                 usersBean.setStateType(STATE_TYPE.confirmed);
                 usersBean.setUserType(USER_TYPE.teacher);
 

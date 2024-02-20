@@ -14,7 +14,8 @@
 </head>
 <body>
 
-<c:if test="${sessionScope.usersBean.privilageType == 'admin'}">
+
+<c:if test="${usersBean.privilageType == 'admin'}">
 <nav id="subnav">
     <a href="/registerTeachers" class="registerteachers" title="registerTeachers">Register Teachers</a>
     <a href="/registerStudents" class="registerstudents" title="registerStudents">Register Students</a>

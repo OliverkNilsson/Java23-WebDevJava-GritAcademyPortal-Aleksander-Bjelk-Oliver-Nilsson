@@ -13,7 +13,8 @@
 <body>
 <%@ include file="fragments/header.jsp"%>
 <h2 class="subHeader" id="subHeadertext">User Page</h2>
-<%@ include file="fragments/student/studentUserPage.jsp"%>
+<%@ include file="fragments/navCon.jsp"%>
+<%@ include file="fragments/subNav.jsp"%>
 <%@ include file="fragments/footer.jsp"%>
 
 </body>

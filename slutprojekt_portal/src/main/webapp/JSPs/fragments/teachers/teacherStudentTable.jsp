@@ -1,6 +1,6 @@
 <div class="center">
     <form action="/userpage" method="post">
-        <select id="user_type" name="studentId">
+        <select id="user_type" name="studentName">
             <c:forEach items="${students}" var="dataC">
                 <option value="${dataC[0]}">${dataC[0]}</option>
             </c:forEach>

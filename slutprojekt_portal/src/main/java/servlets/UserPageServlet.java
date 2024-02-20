@@ -41,6 +41,19 @@ public class UserPageServlet extends HttpServlet {
             req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
 
         }else if (usersBean != null && usersBean.getUserType() == USER_TYPE.teacher && usersBean.getPrivilageType()==PRIVILAGE_TYPE.user && usersBean.getStateType() == STATE_TYPE.confirmed) {
+            LinkedList<String[]> data = null;
+            LinkedList<String[]> courses = MySQLConnector.getConnector().selectQuery("allCourses");
+
+            System.out.println(courses.size());
+            if(req.getParameter("studentSubmitButton")!=null){
+                data = MySQLConnector.getConnector().selectQuery("courseDetails",  req.getParameter("courseId"));
+                System.out.println(data.size());
+            }else {
+                data = courses;
+            }
+
+            req.setAttribute("data", data);
+            req.setAttribute("courses", courses);
             req.getRequestDispatcher("JSPs/Userpage.jsp").forward(req, resp);
         }else{
             req.getRequestDispatcher("JSPs/LogIn.jsp").forward(req, resp);

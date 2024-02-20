@@ -15,7 +15,13 @@
 <h2 class="subHeader" id="subHeadertext">User Page</h2>
 <%@ include file="fragments/navCon.jsp"%>
 <%@ include file="fragments/subNav.jsp"%>
+
+<c:if test = "${usersBean.userType == 'student'}">
+<%@ include file="fragments/student/studentUserPage.jsp"%>
+</c:if>
+<c:if test = "${usersBean.userType == 'teacher'}">
 <%@ include file="fragments/teachers/teacherUserPage.jsp"%>
+</c:if>
 <%@ include file="fragments/footer.jsp"%>
 
 </body>

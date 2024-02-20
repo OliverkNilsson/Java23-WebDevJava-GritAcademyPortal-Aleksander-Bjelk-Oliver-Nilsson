@@ -14,3 +14,4 @@ allCoursesForStudentAndStudentsAndTeachers;SELECT s.student_id, s.fname, t.fname
 
 allCoursesForStudent;SELECT c.courses_id, c.name FROM students s JOIN students_courses sc ON s.student_id = sc.students_id JOIN courses c ON sc.courses_id = c.courses_id WHERE s.student_id = '{0}'; GritAcademyPortal;localhost;4306;user;user
 courseDetails;SELECT s.student_id, s.fname AS Students, t.fname AS Teachers FROM students s JOIN students_courses sc ON s.student_id = sc.students_id JOIN courses c ON sc.courses_id = c.courses_id JOIN teachers_courses tc ON c.courses_id = tc.courses_id JOIN teachers t ON tc.teachers_id = t.teachers_id WHERE c.courses_id = '{0}'; GritAcademyPortal;localhost;4306;user;user
+allCoursesForStudentName;SELECT c.courses_id, c.name FROM students s JOIN students_courses sc ON s.student_id = sc.students_id JOIN courses c ON sc.courses_id = c.courses_id WHERE s.fname = '{0}'; GritAcademyPortal;localhost;4306;user;user

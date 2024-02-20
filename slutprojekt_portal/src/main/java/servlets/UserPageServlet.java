@@ -35,6 +35,7 @@ public class UserPageServlet extends HttpServlet {
                 System.out.println(data.size());
             }else {
                 data = courses;
+                System.out.println(data + "????");
             }
             req.setAttribute("data", data);
             req.setAttribute("courses", courses);
@@ -50,7 +51,8 @@ public class UserPageServlet extends HttpServlet {
 
             System.out.println(students.size());
             if(req.getParameter("showCoursesForStudent")!=null){
-                data = MySQLConnector.getConnector().selectQuery("allCoursesForStudent",  req.getParameter("studentId"));
+                data = MySQLConnector.getConnector().selectQuery("allCoursesForStudentName",  req.getParameter("studentId"));
+                System.out.println(req.getParameter("studentId"));
                 System.out.println(data + "!!!!!");
                 System.out.println(data.size());
             }else {

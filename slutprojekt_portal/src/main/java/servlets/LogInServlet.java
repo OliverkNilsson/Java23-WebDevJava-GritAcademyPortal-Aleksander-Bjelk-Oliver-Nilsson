@@ -14,7 +14,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
-@WebServlet (name="/login", urlPatterns = "/login")
+@WebServlet(name = "/login", urlPatterns = "/login")
 public class LogInServlet extends HttpServlet {
 
     @Override
@@ -41,7 +41,6 @@ public class LogInServlet extends HttpServlet {
                 usersBean.setUserType(USER_TYPE.student);
 
                 req.getSession().setAttribute("usersBean", usersBean);
-                System.out.println(usersBean);
                 req.getRequestDispatcher("/userpage").forward(req, resp);
             } else {
                 req.setAttribute("errorMessage", "Invalid username or password");

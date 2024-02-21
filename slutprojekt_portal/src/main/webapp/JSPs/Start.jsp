@@ -12,29 +12,26 @@
 
 
 <body>
-<%@ include file="fragments/header.jsp"%>
+<%@ include file="fragments/header.jsp" %>
 <h2 class="subHeader" id="subHeadertext">Start</h2>
-<%@ include file="fragments/navAno.jsp"%>
+<%@ include file="fragments/navAno.jsp" %>
 <div class="startpicture">
-<div class="center">
-    <br>
-    <h1 style="margin-top: 0;">
-        Welcome to Grit Academy Portal
-    </h1> <br>
+    <div class="center">
+        <br>
+        <h1 style="margin-top: 0;">
+            Welcome to Grit Academy Portal
+        </h1> <br>
 
-    <h2>
-        Here you can find all your information as student, teacher or admin
-    </h2> <br>
+        <h2>
+            Here you can find all your information as student, teacher or admin
+        </h2> <br>
 
-    <h3>
-        If you want to look at our schools courses, press the link in the navbar!
-    </h3> <br>
-
-
-
+        <h3>
+            If you want to look at our schools courses, press the link in the navbar!
+        </h3> <br>
+    </div>
 </div>
-</div>
-<%@ include file="fragments/footer.jsp"%>
+<%@ include file="fragments/footer.jsp" %>
 
 </body>
 </html>

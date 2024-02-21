@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.LinkedList;
 
-@WebServlet(name="/courses", urlPatterns = "/courses")
+@WebServlet(name = "/courses", urlPatterns = "/courses")
 public class CoursesServlet extends HttpServlet {
 
     @Override
